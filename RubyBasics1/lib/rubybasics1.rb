@@ -21,6 +21,7 @@ def max_2_sum arr
   elsif a.length == 1
     return a[0]
   else
+    #Sort array
     (a.length-1).times do |x|
       (a.length-1).times do |y|
         temp = a[y]
@@ -37,6 +38,22 @@ end
 
 # Part III
 def sum_to_n? arr, n
-  
+  sum = false
+  if arr.length == 0 || arr.length == 1
+    sum = false
+  else
+    arr.each do |x|
+      arr.each do |y|
+        if x == y
+          sum = false
+        elsif x + y == n
+          sum = true
+          return true
+        end
+      end
+    end
+  end
+  return sum
+    
     
 end
