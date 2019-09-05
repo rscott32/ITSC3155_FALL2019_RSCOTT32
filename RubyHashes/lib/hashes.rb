@@ -1,7 +1,17 @@
+# Author: Richard Scott
 # RubyHashes
 # Part I
 def array_2_hash emails, contacts
-    # YOUR CODE HERE
+    i = 0
+    if emails.length == 0
+        return contacts
+    else
+        contacts.each do |x, y|
+            contacts[x] = emails[i]
+        i += 1
+    end
+    end
+    return contacts
 end
 
 # Part II
