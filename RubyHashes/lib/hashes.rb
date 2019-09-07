@@ -8,15 +8,23 @@ def array_2_hash emails, contacts
     else
         contacts.each do |x, y|
             contacts[x] = emails[i]
-        i += 1
-    end
+            i += 1
+        end
     end
     return contacts
 end
 
 # Part II
 def array2d_2_hash contact_info, contacts
-    # YOUR CODE HERE
+    i = 0
+    if (contact_info.length == 0 || contact_info[0].length == 0)
+    else
+        contacts.each do |x, y|
+            contacts[x] = {:email=>contact_info[i][0], :phone=>contact_info[i][1]}
+            i+=1
+        end
+    end
+    return contacts
 end
 
 # Part III
