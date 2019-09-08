@@ -28,6 +28,17 @@ def array2d_2_hash contact_info, contacts
 end
 
 # Part III
+#Definitely not elegant, but it gets the job done.
 def hash_2_array contacts
-    # YOUR CODE HERE
+    if contacts.length == 0
+        return [[],[],[]]
+    else
+        a1 = contacts.flatten
+        names = [a1[0], a1[2]]
+        bob = a1[1].flatten
+        sally = a1[3].flatten
+        emails = [bob[1], sally[1]]
+        phones = [bob[3], sally[3]]
+        return [emails, phones, names]
+    end
 end
