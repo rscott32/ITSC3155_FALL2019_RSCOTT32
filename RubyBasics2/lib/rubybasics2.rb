@@ -20,5 +20,17 @@ end
 
 # Part III
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s =~ /\D/
+    return nil
+  elsif s =~ /[2-9]/
+    return nil
+  elsif s == ''
+    return nil
+  else
+    if (s.to_i % 100 == 0) #I know it doesn't use regex, but it seems simpler and more efficient to do it this way.
+      return 1
+    else
+      return nil
+    end
+  end
 end
