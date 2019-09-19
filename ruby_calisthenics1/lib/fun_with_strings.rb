@@ -1,9 +1,19 @@
 module FunWithStrings
   def palindrome?
-    # your code here
+    str = self
+    str = str.gsub(/[\W]/, '')
+    
+    str = str.downcase
+    str1 = str.reverse
+    if (str == str1)
+      return true
+    else
+      return false
+    end
   end
+  
   def count_words
-    # your code here
+    
   end
   def anagram_groups
     # your code here
