@@ -13,8 +13,23 @@ module FunWithStrings
   end
   
   def count_words
+    str = self.downcase
+    str1 = str.scan(/\w+/)
+    str2 = {}
+    str1.each do |x|
+      if str2.has_key?(x)
+        str2[x] = str2[x] + 1
+      else
+        str2[x] = 1
+      end
     
+    end
+  
+  return str2
   end
+
+  
+  
   def anagram_groups
     # your code here
   end
