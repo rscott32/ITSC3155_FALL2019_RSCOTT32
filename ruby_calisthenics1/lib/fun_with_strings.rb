@@ -22,16 +22,17 @@ module FunWithStrings
       else
         str2[x] = 1
       end
-    
     end
-  
   return str2
   end
 
   
   
   def anagram_groups
-    # your code here
+    str = self
+    arr = str.scan(/\w+/)
+    arr = arr.group_by{|x| x.each_char.sort}.values
+    return arr
   end
 end
 
