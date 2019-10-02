@@ -18,10 +18,14 @@ class Dessert
   end
   
   def healthy?
-    # your code here
+    if self.calories < 200
+      return true
+    else
+      return false
+    end
   end
   def delicious?
-    # your code here
+    return true
   end
 end
 
