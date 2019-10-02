@@ -25,13 +25,31 @@ class Dessert
     end
   end
   def delicious?
-    return true
+    if @flavor == "licorice"
+      return false
+    else
+      return true
+    end
   end
 end
 
 class JellyBean < Dessert
   # add code for setters and getters
   def initialize(flavor)
-    # your code here
+    @name = flavor + " jelly bean"
+    @flavor = flavor
+    @calories = 5
+  end
+  def flavor
+    @flavor
+  end
+  def flavor=(flavor)
+    @flavor = flavor
+  end
+  def calories
+    @calories
+  end
+  def calories=(calories)
+    @calories = calories
   end
 end
