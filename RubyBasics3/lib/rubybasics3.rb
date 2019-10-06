@@ -4,6 +4,8 @@ class BookInStock
     attr_accessor :isbn, :price
     
     def initialize (isbn, price)
+        raise ArgumentError.new("Price must be a positive value") if price <= 0
+        raise ArgumentError.new("ISBN must not be empty") if isbn == ""
         @isbn = isbn
         @price = price
     end
