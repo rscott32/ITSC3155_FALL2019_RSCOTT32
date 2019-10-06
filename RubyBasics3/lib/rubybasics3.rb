@@ -21,4 +21,9 @@ class BookInStock
     def price=(price)
         @price=price
     end
+    #God bless stackoverflow
+    def price_as_string
+        str = "$" + '%.2f' % @price
+        return str
+    end
 end
